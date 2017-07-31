@@ -1,7 +1,7 @@
-d3-chord-diagrams
+Nektar Dependency
 =================
 
-Example Chord Diagrams in D3
+Dependency of Nektar++ visualised using D3
 
 Instructions:
 
@@ -13,4 +13,4 @@ Instructions:
 
 4. go to localhost:8080 in your favorite browser (if your favorite is not IE)
 
-4. enjoy!!
+4. open nek_dep.html
