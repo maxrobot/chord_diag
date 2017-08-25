@@ -219,62 +219,286 @@
           },        
           {"name": "Driver", 
             "children": [
-            {"name": "Standard", "size": 721},
-            {"name": "Adaptive", "size": 721}
+            {"name": "SteadyState"}
             ]
           },        
-          {"name": "Advection", 
+          {"name": "EvolutionOperator", 
             "children": [
-            {"name": "Convective", "size": 721},
-            {"name": "NonConservative", "size": 721},
-            {"name": "Linearised", "size": 721},
-            {"name": "Adjoint", "size": 721},
-            {"name": "SkewSymmetric", "size": 721},
-            {"name": "NoConvection", "size": 721}
+            {"name": "ClassicalSFD", "size": 721},
+            {"name": "AdaptiveSFD", "size": 721}
             ]
-          }     
+          },     
+          {"name": "BaseFlow", 
+            "children": [
+            {"name": "VariableName", "size": 721},
+            {"name": "Type", 
+              "children": [
+              {"name": "File", "size": 721},
+              {"name": "Expression", "size": 721}
+              ]
+            }
+            ]
+          },     
+          {"name": "ModeType", "size": 721}
           ]
         }
       ]
     },
-    {"name": "FunctionSequence", "size": 5842},
-    {"name": "Tween", "size": 6006}
+    {"name": "SolverType", 
+      "children": [
+      {"name": "VelocityCorrectionScheme", "size": 721},
+      {"name": "CoupledLinearisedNS", "size": 721}
+      ]
+    },
+    {"name": "Equation", 
+      "children": [
+      {"name": "SteadyOseen", "size": 721},
+      {"name": "SteadyStokes", "size": 721},
+      {"name": "SteadyLinearisedNS", "size": 721},
+      {"name": "UnsteadyStokes", "size": 721},
+      {"name": "UnsteadyNavierStokes", "size": 721}
+      ]
+    },
+    {"name": "Projection", 
+      "children": [
+      {"name": "ContinuousGalerkin", "size": 721},
+      {"name": "DisContinuousGalerkin", "size": 721},
+      {"name": "MixedCG_DG", "size": 721}
+      ]
+    },
+    {"name": "Expansion", 
+      "children": [
+      {"name": "PolynomialOrder", "size": 721},
+      {"name": "BasisType", 
+        "children": [
+        {"name": "Modified", "size": 721},
+        {"name": "Gauss Lagrange", "size": 721},
+        {"name": "GLL Lagrange", "size": 721},
+        {"name": "GLL Lagrange SEM", "size": 721},
+        {"name": "Chebyshev", "size": 721}
+        ]
+      }
+      ]
+    }
    ]
   },
   {
    "name": "AdditionalParameters",
    "children": [
-    {
-     "name": "converters",
+    {"name": "KinematicViscosity", "size": 721},
+    {"name": "IOParams",
      "children": [
-      {"name": "Converters", "size": 721},
-      {"name": "DelimitedTextConverter", "size": 4294},
-      {"name": "GraphMLConverter", "size": 9800},
-      {"name": "IDataConverter", "size": 1314},
-      {"name": "JSONConverter", "size": 2220}
+      {"name": "IO_CFLSteps", "size": 721},
+      {"name": "IO_CheckSteps", "size": 721},
+      {"name": "IO_InfoSteps", "size": 2220}
      ]
     },
-    {"name": "DataField", "size": 1759},
-    {"name": "DataSchema", "size": 2165},
-    {"name": "DataSet", "size": 586},
-    {"name": "DataSource", "size": 3331},
-    {"name": "DataTable", "size": 772},
-    {"name": "DataUtil", "size": 3322}
+    {"name": "CustomInputs",
+     "children": [
+      {"name": "CustomExpression",
+       "children": [
+        {"name": "Name", "size": 721},
+        {"name": "Value", "size": 2220}
+       ]
+      },
+      {"name": "CustomParameter",
+       "children": [
+        {"name": "Name", "size": 721},
+        {"name": "Value", "size": 2220}
+       ]
+      }
+     ]
+    },
+    {"name": "Filter",
+     "children": [
+      {"name": "AeroForces", "size": 721},
+      {"name": "AverageField", "size": 721},
+      {"name": "Checkpoints", "size": 721},
+      {"name": "Energy", "size": 721},
+      {"name": "HistoryPoints", "size": 721},
+      {"name": "ModalEnergy", "size": 721},
+      {"name": "MovingAverage", "size": 721},
+      {"name": "ReynoldsStresses", "size": 721},
+      {"name": "Threshold", "size": 2220}
+     ]
+    },
+    {"name": "Force",
+     "children": [
+      {"name": "Absorption",
+       "children": [
+        {"name": "Coeff", "size": 721},
+        {"name": "RefFlow", "size": 721},
+        {"name": "RefFlowTime", "size": 2220}
+       ]
+      },
+      {"name": "Body",
+       "children": [
+        {"name": "BodyForce", "size": 2220}
+       ]
+      },
+      {"name": "Noise",
+       "children": [
+        {"name": "WhiteNoise", "size": 721},
+        {"name": "UpdateFreq", "size": 721},
+        {"name": "Nsteps", "size": 2220}
+       ]
+      }
+     ]
+    },
+    {"name": "Function",
+     "children": [
+      {"name": "FunctionName", "size": 2220},
+      {"name": "Expression",
+       "children": [
+        {"name": "ExpressionVar", "size": 721},
+        {"name": "ExpressionValue", "size": 2220}
+       ]
+      }
+     ]
+    }
    ]
   },
   {
    "name": "AdvancedParameters",
    "children": [
-    {"name": "DirtySprite", "size": 8833},
-    {"name": "LineSprite", "size": 1732},
-    {"name": "RectSprite", "size": 3623},
-    {"name": "TextSprite", "size": 10066}
+    {"name": "CFL", "size": 8833},
+    {"name": "Dealiasing", "size": 1732},
+    {"name": "SpectralHpDealiasing", "size": 3623},
+    {"name": "SpectralVanishingViscosity",
+      "children": [
+      {"name": "SVVCutoffRatio", "size": 4116},
+      {"name": "SVVDiffCoeff", "size": 4116}
+      ]
+    },
+    {"name": "WeightPartitions",
+      "children": [
+      {"name": "Uniform", "size": 4116},
+      {"name": "NonUniform - DoF", "size": 4116},
+      {"name": "NonUniform - Boundary", "size": 4116},
+      {"name": "NonUniform - Both", "size": 4116}
+      ]
+    }
    ]
   },
   {
    "name": "Optimisations",
    "children": [
-    {"name": "FlareVis", "size": 4116}
+    {"name": "GlobalSysSolution",
+      "children": [
+      {"name": "Field", "size": 4116},
+      {"name": "InversionType",
+        "children": [
+        {"name": "Direct",
+          "children": [
+          {"name": "SubStructuring",
+            "children": [
+            {"name": "Full", "size": 4116},
+            {"name": "StaticCondensation", "size": 4116}
+            ]
+          }
+          ]
+        },
+        {"name": "Iterative",
+          "children": [
+          {"name": "SubStructuring",
+            "children": [
+            {"name": "Full", "size": 4116},
+            {"name": "StaticCondensation", "size": 4116}
+            ]
+          },
+          {"name": "PreConditioning",
+            "children": [
+            {"name": "Diagonal", "size": 4116},
+            {"name": "FullLinearSpace", "size": 4116},
+            {"name": "LowEnergyBlock", "size": 4116},
+            {"name": "Block", "size": 4116},  
+            {"name": "FullLinearSpaceWithDiagonal", "size": 4116},
+            {"name": "FullLinearSpaceWithLowEnergyBlock", "size": 4116},
+            {"name": "FullLinearSpaceWithBlock", "size": 4116}
+            ]
+          },
+          {"name": "SuccessiveRHS", "size": 4116},
+          {"name": "IterativeSolverTolerance", "size": 4116}
+          ]
+        },
+        {"name": "Xxt",
+          "children": [
+          {"name": "Full", "size": 4116},
+          {"name": "MultiLevelStaticCondensation", "size": 4116},
+          {"name": "StaticCondensation", "size": 4116}
+          ]
+        },
+        {"name": "PETSc",
+          "children": [
+          {"name": "SubStructuring",
+            "children": [
+            {"name": "Full", "size": 4116},
+            {"name": "StaticCondensation", "size": 4116}
+            ]
+          },
+          {"name": "PreConditioning",
+            "children": [
+            {"name": "Diagonal", "size": 4116},
+            {"name": "FullLinearSpace", "size": 4116},
+            {"name": "LowEnergyBlock", "size": 4116},
+            {"name": "Block", "size": 4116},
+            {"name": "FullLinearSpaceWithDiagonal", "size": 4116},
+            {"name": "FullLinearSpaceWithLowEnergyBlock", "size": 4116},
+            {"name": "FullLinearSpaceWithBlock", "size": 4116}
+            ]
+          },
+          {"name": "SuccessiveRHS", "size": 4116},
+          {"name": "IterativeSolverTolerance", "size": 4116}
+          ]
+        }
+        ]
+      }
+      ]
+    },
+    {"name": "Collections",
+      "children": [
+      {"name": "NoCollection", "size": 4116},
+      {"name": "AutoTuning", "size": 4116},
+      {"name": "stdmat", "size": 4116},
+      {"name": "SumFac", "size": 4116},
+      {"name": "IterPerExp", "size": 4116},
+      {"name": "Manual",
+        "children": [
+        {"name": "OperatorType",
+          "children": [
+          {"name": "BWDTrans", "size": 4116},
+          {"name": "IProductWRTBase", "size": 4116},
+          {"name": "IProductWRTDerivBase", "size": 4116},
+          {"name": "PhysDeriv", "size": 4116}
+          ]
+        },
+        {"name": "Element",
+          "children": [
+          {"name": "ElementType",
+            "children": [
+            {"name": "Segment", "size": 4116},
+            {"name": "Quadrilateral", "size": 4116},
+            {"name": "Triangle", "size": 4116},
+            {"name": "Hexahedral", "size": 4116},
+            {"name": "Tetrahedral", "size": 4116},
+            {"name": "Prism", "size": 4116},
+            {"name": "Pyramid", "size": 4116}
+            ]
+          },
+          {"name": "Order", "size": 4116},
+          {"name": "Implementation",
+            "children": [
+            {"name": "StdMat", "size": 4116},
+            {"name": "SumFac", "size": 4116},
+            {"name": "IterPerExp", "size": 4116}
+            ]
+          }
+          ]
+        }
+        ] 
+      }
+      ] 
+    }
    ]
   }
  ]
