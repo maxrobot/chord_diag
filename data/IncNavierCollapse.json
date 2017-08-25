@@ -173,16 +173,27 @@
             }
             ]
           },        
-          {"name": "Advection", 
+          {"name": "EvolutionOperator", 
             "children": [
-            {"name": "Convective", "size": 721},
-            {"name": "NonConservative", "size": 721},
-            {"name": "Linearised", "size": 721},
+            {"name": "Direct", "size": 721},
             {"name": "Adjoint", "size": 721},
+            {"name": "NonLinear", "size": 721},
             {"name": "SkewSymmetric", "size": 721},
-            {"name": "NoConvection", "size": 721}
+            {"name": "TransientGrowth", "size": 721}
             ]
-          }     
+          },     
+          {"name": "BaseFlow", 
+            "children": [
+            {"name": "VariableName", "size": 721},
+            {"name": "Type", 
+              "children": [
+              {"name": "File", "size": 721},
+              {"name": "Expression", "size": 721}
+              ]
+            }
+            ]
+          },     
+          {"name": "ModeType", "size": 721}
           ]
         },
         {"name": "SteadyStateStability", 
