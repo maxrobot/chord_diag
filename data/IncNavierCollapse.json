@@ -1,0 +1,270 @@
+{
+ "name": "IncompressibleNavierStokes",
+ "children": [
+  {
+   "name": "ProblemSpecfication",
+   "children": [
+    {
+     "name": "Dimensions",
+     "children": [
+      {"name": "2D",
+        "children": [
+        {"name": "Quasi-Dimensions",
+          "children": [
+            {"name": "HomogenousModesY"},
+            {"name": "LengthY"}
+          ]
+        }
+        ]
+      },
+      {"name": "3D",
+        "children": [
+        {"name": "Quasi-Dimensions",
+          "children": [
+            {"name": "HomogenousModesY"},
+            {"name": "LengthY"},
+            {"name": "HomogenousModesZ"},
+            {"name": "LengthZ"}
+          ]
+        }
+        ]
+      }
+     ]
+    },
+    {"name": "ReynoldsNumber"},
+    {
+     "name": "Geometry",
+     "children": [
+      {"name": "FileBrowse", "size": 7074}
+     ]
+    },
+    {
+     "name": "BoundaryDetails",
+     "children": [
+      {"name": "BoundaryConditions",
+        "children": [
+        {"name": "BoundaryReference", "size": 70},
+        {"name": "FieldVariables",
+          "children": [
+          {"name": "Dirichlet", 
+            "children": [
+            {"name": "ConditionValue", "size": 70},
+            {"name": "UserDefinedType", "size": 70},
+            {"name": "PrimaryCoefficient", "size": 7}
+            ]
+          },
+          {"name": "Neumann", 
+            "children": [
+            {"name": "ConditionValue", "size": 70},
+            {"name": "UserDefinedType", "size": 70},
+            {"name": "PrimaryCoefficient", "size": 7}
+            ]
+          },
+          {"name": "Robin", 
+            "children": [
+            {"name": "ConditionValue", "size": 70},
+            {"name": "UserDefinedType", "size": 70},
+            {"name": "PrimaryCoefficient", "size": 7}
+            ]
+          },
+          {"name": "Periodic", 
+            "children": [
+            {"name": "ConditionValue", "size": 70},
+            {"name": "UserDefinedType", "size": 70}            ]
+          }
+          ]
+        }
+        ]
+      },
+      {"name": "BoundaryRegions",
+        "children": [
+        {"name": "CompositeReference", "size": 70}
+        ]
+      }
+     ]
+    },
+    {
+     "name": "InitialConditions",
+     "children": [
+      {"name": "Field", "size": 7074},
+      {"name": "FileBrowse", "size": 7074},
+      {"name": "Equation", "size": 7074}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "NumericalSpecification",
+   "children": [
+    {"name": "SimulationType", 
+      "children": [
+        {"name": "DirectNumericalSimulation", 
+          "children": [
+          {"name": "TimeIntegration", 
+            "children": [
+            {"name": "Timing", "size": 721},
+            {"name": "TimeIntegrationMethod", 
+              "children": [
+              {"name": "IMEXOrder1", "size": 721},
+              {"name": "IMEXOrder2", "size": 721},
+              {"name": "IMEXOrder3", "size": 721},
+              {"name": "DIRKOrder1", "size": 721},
+              {"name": "ForwardEuler", "size": 721},
+              {"name": "BackwardEuler", "size": 721},
+              {"name": "DIRKOrder1", "size": 721},
+              {"name": "ClassicalRungeKutta4", "size": 721},
+              {"name": "BDFImplicitOrder1", "size": 721},
+              {"name": "BDFImplicitOrder2", "size": 721}
+              ]
+            }      
+            ]
+          },        
+          {"name": "Driver", 
+            "children": [
+            {"name": "Standard", "size": 721},
+            {"name": "Adaptive", "size": 721}
+            ]
+          },        
+          {"name": "Advection", 
+            "children": [
+            {"name": "Convective", "size": 721},
+            {"name": "NonConservative", "size": 721},
+            {"name": "Linearised", "size": 721},
+            {"name": "Adjoint", "size": 721},
+            {"name": "SkewSymmetric", "size": 721},
+            {"name": "NoConvection", "size": 721}
+            ]
+          }     
+          ]
+        },
+        {"name": "StabilityAnalysis", 
+          "children": [
+          {"name": "TimeIntegration", 
+            "children": [
+            {"name": "Timing", "size": 721},
+            {"name": "TimeIntegrationMethod", 
+              "children": [
+              {"name": "IMEXOrder1", "size": 721},
+              {"name": "IMEXOrder2", "size": 721},
+              {"name": "IMEXOrder3", "size": 721},
+              {"name": "DIRKOrder1", "size": 721},
+              {"name": "ForwardEuler", "size": 721},
+              {"name": "BackwardEuler", "size": 721},
+              {"name": "DIRKOrder1", "size": 721},
+              {"name": "ClassicalRungeKutta4", "size": 721},
+              {"name": "BDFImplicitOrder1", "size": 721},
+              {"name": "BDFImplicitOrder2", "size": 721}
+              ]
+            }      
+            ]
+          },        
+          {"name": "Driver", 
+            "children": [
+            {"name": "Standard", "size": 721},
+            {"name": "ModifiedArnoldi", "size": 721},
+            {"name": "Arpack",
+              "children": [
+              {"name": "ArpackType", "size": 721},
+              {"name": "kdim", "size": 721},
+              {"name": "nvec", "size": 721},
+              {"name": "evtol", "size": 721},
+              {"name": "nits", "size": 721}
+              ] 
+            }
+            ]
+          },        
+          {"name": "Advection", 
+            "children": [
+            {"name": "Convective", "size": 721},
+            {"name": "NonConservative", "size": 721},
+            {"name": "Linearised", "size": 721},
+            {"name": "Adjoint", "size": 721},
+            {"name": "SkewSymmetric", "size": 721},
+            {"name": "NoConvection", "size": 721}
+            ]
+          }     
+          ]
+        },
+        {"name": "SteadyStateStability", 
+          "children": [
+          {"name": "TimeIntegration", 
+            "children": [
+            {"name": "Timing", "size": 721},
+            {"name": "TimeIntegrationMethod", 
+              "children": [
+              {"name": "IMEXOrder1", "size": 721},
+              {"name": "IMEXOrder2", "size": 721},
+              {"name": "IMEXOrder3", "size": 721},
+              {"name": "DIRKOrder1", "size": 721},
+              {"name": "ForwardEuler", "size": 721},
+              {"name": "BackwardEuler", "size": 721},
+              {"name": "DIRKOrder1", "size": 721},
+              {"name": "ClassicalRungeKutta4", "size": 721},
+              {"name": "BDFImplicitOrder1", "size": 721},
+              {"name": "BDFImplicitOrder2", "size": 721}
+              ]
+            }      
+            ]
+          },        
+          {"name": "Driver", 
+            "children": [
+            {"name": "Standard", "size": 721},
+            {"name": "Adaptive", "size": 721}
+            ]
+          },        
+          {"name": "Advection", 
+            "children": [
+            {"name": "Convective", "size": 721},
+            {"name": "NonConservative", "size": 721},
+            {"name": "Linearised", "size": 721},
+            {"name": "Adjoint", "size": 721},
+            {"name": "SkewSymmetric", "size": 721},
+            {"name": "NoConvection", "size": 721}
+            ]
+          }     
+          ]
+        }
+      ]
+    },
+    {"name": "FunctionSequence", "size": 5842},
+    {"name": "Tween", "size": 6006}
+   ]
+  },
+  {
+   "name": "AdditionalParameters",
+   "children": [
+    {
+     "name": "converters",
+     "children": [
+      {"name": "Converters", "size": 721},
+      {"name": "DelimitedTextConverter", "size": 4294},
+      {"name": "GraphMLConverter", "size": 9800},
+      {"name": "IDataConverter", "size": 1314},
+      {"name": "JSONConverter", "size": 2220}
+     ]
+    },
+    {"name": "DataField", "size": 1759},
+    {"name": "DataSchema", "size": 2165},
+    {"name": "DataSet", "size": 586},
+    {"name": "DataSource", "size": 3331},
+    {"name": "DataTable", "size": 772},
+    {"name": "DataUtil", "size": 3322}
+   ]
+  },
+  {
+   "name": "AdvancedParameters",
+   "children": [
+    {"name": "DirtySprite", "size": 8833},
+    {"name": "LineSprite", "size": 1732},
+    {"name": "RectSprite", "size": 3623},
+    {"name": "TextSprite", "size": 10066}
+   ]
+  },
+  {
+   "name": "Optimisations",
+   "children": [
+    {"name": "FlareVis", "size": 4116}
+   ]
+  }
+ ]
+}

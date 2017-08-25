@@ -2,7 +2,7 @@ id,value
  ,
  .IncompressibleNS,
  .IncompressibleNS.ProblemSpecification,
- .IncompressibleNS.numSpecification,
+ .IncompressibleNS.NumSpecification,
  .IncompressibleNS.AdditionalParams,
  .IncompressibleNS.AdvancedParams,
  .IncompressibleNS.Optimisation,

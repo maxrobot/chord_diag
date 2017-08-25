@@ -1,0 +1,8 @@
+id,value
+ ,
+ .Domain,
+ .Domain.Conditions,
+ .Domain.Numerics,
+ .Domain.Numerics.InputOutput,
+ .Domain.Numerics.PostProcessing,
+ .Domain.Numerics.PostProcessing.AdvancedDetails,
